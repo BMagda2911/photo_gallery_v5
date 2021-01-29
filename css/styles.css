@@ -12,38 +12,33 @@ body {
   text-align: center;
   margin: 0;
 }
-
+/* this is where the gallery starts */
 .main-content {
-  width: 95%;
-  min-width: 1200px;
-  margin: 2em auto;
+  max-width: 1200px;
+  margin: 0 auto;
   display:  grid;
   grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 30px;
+  justify-items: stretch;
 }
 
 img {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  display: block;
 }
-/*/*
-  padding: 0 203px;
- grid-template-columns: repeat(4, 300px);
-  grid-template-rows: repeat(3, 300px);
 
-/* ===================================== 
-  Grid Layout Styles
-======================================== */
+#searchbar{ 
+  margin: 30px; 
+  padding:10px; 
+  border-radius: 10px; 
+} 
 
-
-  /*   
-    Instruct the browser to automatically fit column tracks.
-     - Use the Grid functions and keywords that auto-generate as many columns 
-    necessary to fit the available space, without causing the grid to overflow.
-     - Each column should not get narrower than 280px and, if the available space allows it, 
-    each column should expand to take up 1 fraction of the free space.
-  */
-  /*grid-auto-columns: 280px;*/
-  
-  
-  /* Apply a 20px gutter to rows and columns */ 
+input[type=text] { 
+   width: 30%; 
+   -webkit-transition: width 0.15s ease-in-out; 
+   transition: width 0.15s ease-in-out; 
+} 
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus { 
+  width: 50%; 
+} 
