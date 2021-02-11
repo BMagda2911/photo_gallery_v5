@@ -25,9 +25,9 @@ function searchFilter() {
   searchInput = document.getElementById("search");
   gallery = document.querySelectorAll(".gallery a");
   a = document.getElementsByTagName("a");
-  searchInput.value = searchInput.value.toUpperCase();
+  searchInput.value = searchInput.value.toLowerCase();
   for (i = 0; i < gallery.length; i++) {
-    caption = a[i].getAttribute("data-caption").toUpperCase();
+    caption = a[i].getAttribute("data-caption").toLowerCase();
     if (caption.includes(searchInput.value)) {
       a[i].style.display = "block";
       a[i].style.margin = "0 auto";
